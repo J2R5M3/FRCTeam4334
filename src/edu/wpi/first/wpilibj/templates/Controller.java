@@ -47,6 +47,16 @@ public class Controller extends Robot{
         else
             return false;
     }
+    
+    public char getDriveType() {
+        char StraightOrDual;
+        if(controller.xboxGetAxis("triggers")>0.05 || controller.xboxGetAxis("triggers")<-0.05) {
+            StraightOrDual = 'S';
+        }else {
+            StraightOrDual = 'D';
+        }
+        return StraightOrDual;
+    }
 }
 
 /* 

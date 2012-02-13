@@ -15,6 +15,7 @@ public TimerControl timerControl;
 public ProcessInformation processInformation;
 public Autonomous autonomous;
 public Reset reset;
+public OperatorControl operatorControl;
 
     public void robotInit() {
         controller.init();
@@ -37,6 +38,7 @@ public Reset reset;
         processInformation = new ProcessInformation();
         autonomous = new Autonomous();
         reset = new Reset();
+        operatorControl = new OperatorControl("xboxMode"); // xboxMode vs. joystick arguments
     }
     
     public void autonomous() {
@@ -47,7 +49,7 @@ public Reset reset;
     
     public void operatorControl() {
         while(isOperatorControl() && isEnabled()) {
-            
+            operatorControl.run();
         }
     }
     
