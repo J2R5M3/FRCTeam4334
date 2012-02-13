@@ -7,6 +7,7 @@ public class TimerControl extends Robot{
     public void init() {
         timer = new Timer();
     }
+    
     public double timerControl(String args) {
         if(args.equals("start"))
             timer.start();
@@ -17,7 +18,7 @@ public class TimerControl extends Robot{
             timer.reset();
             timer.start();
         }
-        else if(args.equals("get")) {
+        else if(args.equals("getTime")) {
             processInformation.finalTime = timer.get();
             return processInformation.finalTime;
         }
