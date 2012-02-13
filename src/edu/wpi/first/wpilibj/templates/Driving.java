@@ -16,10 +16,12 @@ public class Driving extends Robot{
     public void tankDrive(float leftSpeedInput, float rightSpeedInput, double defaultSpeedPercentage) {
         float leftSpeed = leftSpeedInput;
         float rightSpeed = rightSpeedInput;
+        
         leftSpeed =  (float) (0.94*(leftSpeed*leftSpeed)+0.05);
         rightSpeed = (float) (0.94*(rightSpeed*rightSpeed)+0.05); 
         leftSpeed /= defaultSpeedPercentage;
         rightSpeed /= defaultSpeedPercentage;
+        
         robotDrive.tankDrive(leftSpeed, rightSpeed);
         finalLeftSpeed = leftSpeed;
         finalRightSpeed = rightSpeed;
@@ -28,6 +30,7 @@ public class Driving extends Robot{
     public void straightDrive(float speedInput, float turnInput , double defaultSpeedPercentage) {
         float speed = (float) (speedInput / defaultSpeedPercentage);
         float turn = turnInput;
+        
         robotDrive.drive(speed,turn);
         finalSpeed = speed;
         finalTurn = turn;
@@ -35,6 +38,7 @@ public class Driving extends Robot{
     
     public void driveFor(float speed, float turn, double seconds) {
         while(timerControl.timerControl("get") <seconds)
+            
             robotDrive.drive(speed, turn);
             finalSpeed = speed;
             finalTurn = turn;
