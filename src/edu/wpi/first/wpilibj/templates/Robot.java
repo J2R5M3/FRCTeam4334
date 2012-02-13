@@ -50,6 +50,7 @@ public OperatorControl operatorControl;
     public void operatorControl() {
         while(isOperatorControl() && isEnabled()) {
             operatorControl.run();
+            
         }
     }
     
