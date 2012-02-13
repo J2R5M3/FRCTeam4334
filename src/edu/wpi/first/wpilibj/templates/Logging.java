@@ -2,10 +2,9 @@ package edu.wpi.first.wpilibj.templates;
 import edu.wpi.first.wpilibj.DriverStationLCD;
 
 public class Logging extends Robot{
-    public DriverStationLCD driverStationOutput; 
     
     public void init() {
-        driverStationOutput = new DriverStationLCD();
+        
     }
     public void logAll() {
         //Insert code to log all methods
@@ -35,7 +34,8 @@ public class Logging extends Robot{
     
     public void logGyro() {
         input.gyro.getAngle();
-        driverStationOutput.println(DriverStationLCD.Line.kMain6,1,"Hello World");
+        input.driverStationLcd.println(DriverStationLCD.Line.kMain6,1,"Hello World");
+        input.driverStationLcd.updateLCD();
         //Insert code to display value
     }
     
