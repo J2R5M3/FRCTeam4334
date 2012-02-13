@@ -53,7 +53,7 @@ public Reset reset;
     
     public void disabled() {
         while(isDisabled()) {
-            
+            reset.resetAll();
         }
     }
 }
