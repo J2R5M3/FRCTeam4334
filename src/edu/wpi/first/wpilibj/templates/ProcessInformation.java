@@ -9,4 +9,5 @@ public class ProcessInformation extends Robot{
     public float finalXAxis;
     public float finalYAxis;
     public double finalTime;
+    public double finalAverageSpeed;
 }
