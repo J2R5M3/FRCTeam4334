@@ -20,8 +20,17 @@ public class Controller extends Robot{
             axisNum = 3;
         else
             axisNum = 0;
-        processInformation.finalAxis = (float) input.xboxController.getRawAxis(axisNum);
-        return processInformation.finalAxis;
+        if(axisNum == 2 ||axisNum == 5) {
+            processInformation.finalYAxis = (float) input.xboxController.getRawAxis(axisNum);
+            return processInformation.finalYAxis;
+        }else if(axisNum ==1 || axisNum == 4) {
+            processInformation.finalXAxis = (float) input.xboxController.getRawAxis(axisNum);
+            return processInformation.finalXAxis;            
+        }else if(axisNum == 3) {
+            processInformation.finalAxis = (float) input.xboxController.getRawAxis(axisNum);
+            return processInformation.finalAxis;
+        }else
+            return 0;
     }
     
     public boolean xboxGetButton(int button) {
