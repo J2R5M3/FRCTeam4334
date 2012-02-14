@@ -4,37 +4,36 @@ import edu.wpi.first.wpilibj.DriverStationLCD;
 public class Logging extends Robot{
     
     public void init() {
-        
+
     }
     public void logAll() {
-        //Insert code to log all methods
+        String gyroRead = Double.toString(input.gyro.getAngle());
+        String leftEncoderRead = Double.toString(input.leftEncoder.getRate());
+        String rightEncoderRead = Double.toString(input.rightEncoder.getRate());
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser2,1, "Gyro reads "+gyroRead);
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser3,1, "Left speed is "+processInformation.finalLeftSpeed);
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser4,1, "Left encoder reads "+leftEncoderRead);
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser6,1, "Right speed is "+processInformation.finalRightSpeed);
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser5,1, "Right encoder reads "+rightEncoderRead);
+        input.driverStationLcd.updateLCD();
     }   
     public void logSpeed() {
-        
-        /*Insert code to display finalSpeed / finalLeftSpeed / finalRightSpeed
-        while(true){
-            try{    
-            String[][] array = new String[2][2];   
-                        array[0][0] = "Left Speed";
-                        array[0][1] = Float.toString(leftSpeed);
-                        array[1][0] = "Right Speed";
-                        array[1][1] = Float.toString(rightSpeed);
-                        System.out.println("\n\n\n\n\n\n\n\n");
-                        System.out.println(array[0][0]+" "+array[0][1]);
-                        System.out.println(array[1][0]+" "+array[1][1]);
-                Thread.sleep(40L);
-            }catch (InterruptedException iex) {}
-        }
-        */
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser2,1, "Right speed is "+processInformation.finalRightSpeed);
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser3,1, "Left speed is "+processInformation.finalLeftSpeed);
+        input.driverStationLcd.updateLCD();
     }
     
     public void logEncoderSpeed() {
-        //Insert code to display speed
+        String leftEncoderRead = Double.toString(input.leftEncoder.getRate());
+        String rightEncoderRead = Double.toString(input.rightEncoder.getRate());
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser2,1, "Left encoder reads "+leftEncoderRead);
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser3,1, "Right encoder reads "+rightEncoderRead);
+        input.driverStationLcd.updateLCD();
     }
     
     public void logGyro() {
-        input.gyro.getAngle();
-        input.driverStationLcd.println(DriverStationLCD.Line.kMain6,1,"Hello World");
+        String line = Double.toString(input.gyro.getAngle());
+        input.driverStationLcd.println(DriverStationLCD.Line.kUser2,1,"Gyro reads "+line);
         input.driverStationLcd.updateLCD();
         //Insert code to display value
     }

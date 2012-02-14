@@ -24,5 +24,6 @@ public class OperatorControl extends Robot{
         }else { //Joystick mode
             driving.straightDrive(controller.joystickGetAxis('Y') ,controller.joystickGetAxis('X') , 0.5);
         }
+        logging.logAll();
     } 
 }

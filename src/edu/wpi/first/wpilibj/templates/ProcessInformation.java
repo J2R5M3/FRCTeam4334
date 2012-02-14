@@ -5,7 +5,6 @@ public class ProcessInformation extends Robot{
     public void init() {
         
     }
-    //testig git :D
     
     public float leftSpeedInput;
     public float rightSpeedInput;
@@ -14,4 +13,8 @@ public class ProcessInformation extends Robot{
     public float finalYAxis;
     public double finalTime;
     public double finalAverageSpeed;
+    public float finalSpeed;
+    public float finalTurn;
+    public float finalLeftSpeed;
+    public float finalRightSpeed;
 }
