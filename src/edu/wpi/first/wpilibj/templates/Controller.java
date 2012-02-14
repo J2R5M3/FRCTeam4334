@@ -20,10 +20,11 @@ public class Controller extends Robot4334{
             axisNum = 3;
         else
             axisNum = 0;
-        if(axisNum == 2 ||axisNum == 5) {
+        
+        if(axisNum == 2 || axisNum == 5) {
             processInformation.finalYAxis = (float) input.xboxController.getRawAxis(axisNum);
             return processInformation.finalYAxis;
-        }else if(axisNum ==1 || axisNum == 4) {
+        }else if(axisNum == 1 || axisNum == 4) {
             processInformation.finalXAxis = (float) input.xboxController.getRawAxis(axisNum);
             return processInformation.finalXAxis;            
         }else if(axisNum == 3) {

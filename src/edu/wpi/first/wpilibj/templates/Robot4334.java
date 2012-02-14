@@ -41,6 +41,7 @@ public OperatorControl operatorControl;
         reset = new Reset();
         operatorControl = new OperatorControl("xboxMode"); // xboxMode vs. joystick arguments
     }
+     
     
     public void autonomous() {
         while(isAutonomous() && isEnabled()) {

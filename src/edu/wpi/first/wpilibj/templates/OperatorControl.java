@@ -11,7 +11,7 @@ public class OperatorControl extends Robot4334{
             xboxMode = false;
     }
     public void run() {
-        if(xboxMode) { //XBoxController mode
+        while(xboxMode == true) { //XBoxController mode
             if(controller.xboxGetButton(2)) {
                 driving.stopMotor();
             }else {
@@ -21,9 +21,11 @@ public class OperatorControl extends Robot4334{
                     driving.tankDrive(controller.xboxGetAxis("leftY"),controller.xboxGetAxis("rightY"),0.5);
                 }
             }
-        }else { //Joystick mode
+        }
+        
+        while(xboxMode != true) { //Joystick mode
             driving.straightDrive(controller.joystickGetAxis('Y') ,controller.joystickGetAxis('X') , 0.5);
         }
-        logging.logAll();
+       // logging.logAll();
     } 
 }

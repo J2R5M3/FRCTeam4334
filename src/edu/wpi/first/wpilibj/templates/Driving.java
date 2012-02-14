@@ -6,7 +6,6 @@ public class Driving extends Robot4334{
     
     public void init() {
         robotDrive = new RobotDrive(1, 3, 2, 4);
-        robotDrive.setSafetyEnabled(false);
     }
     
     
@@ -16,8 +15,8 @@ public class Driving extends Robot4334{
         
         leftSpeed =  (float) (0.94*(leftSpeed*leftSpeed)+0.05);
         rightSpeed = (float) (0.94*(rightSpeed*rightSpeed)+0.05); 
-        leftSpeed /= defaultSpeedPercentage;
-        rightSpeed /= defaultSpeedPercentage;
+        leftSpeed *= defaultSpeedPercentage;
+        rightSpeed *= defaultSpeedPercentage;
         
         robotDrive.tankDrive(leftSpeed, rightSpeed);
         processInformation.finalLeftSpeed = leftSpeed;
