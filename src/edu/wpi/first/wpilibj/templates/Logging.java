@@ -2,7 +2,7 @@ package edu.wpi.first.wpilibj.templates;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Gyro;
 
-public class Logging extends Robot{
+public class Logging extends Robot4334{
     public Gyro gyro;
     public Encoder leftEncoder;
     public Encoder rightEncoder;

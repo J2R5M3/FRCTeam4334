@@ -2,7 +2,7 @@ package edu.wpi.first.wpilibj.templates;
 
 import edu.wpi.first.wpilibj.SimpleRobot;
 
-public class Robot extends SimpleRobot {
+public class Robot4334 extends SimpleRobot {
 
 //Declaring all classes    
 public Driving driving;

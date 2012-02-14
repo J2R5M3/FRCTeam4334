@@ -1,6 +1,6 @@
 package edu.wpi.first.wpilibj.templates;
 import edu.wpi.first.wpilibj.Timer;
-public class TimerControl extends Robot{
+public class TimerControl extends Robot4334{
     
     public Timer timer;
     

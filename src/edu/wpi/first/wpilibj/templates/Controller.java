@@ -2,7 +2,7 @@ package edu.wpi.first.wpilibj.templates;
 
 import edu.wpi.first.wpilibj.Joystick;
 
-public class Controller extends Robot{
+public class Controller extends Robot4334{
     public Joystick xboxController;
     public Joystick normalJoystick;
     
