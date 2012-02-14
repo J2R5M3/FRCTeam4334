@@ -4,9 +4,6 @@ public class Driving extends Robot4334{
    
     public RobotDrive robotDrive;
     
-    public void init() {
-        robotDrive = new RobotDrive(1, 3, 2, 4);
-    }
     
     
     public void tankDrive(float leftSpeedInput, float rightSpeedInput, double defaultSpeedPercentage) {
