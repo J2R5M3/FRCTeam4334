@@ -1,9 +1,14 @@
 package edu.wpi.first.wpilibj.templates;
 
-public class Controller extends Robot4334{
+import edu.wpi.first.wpilibj.Joystick;
+
+public class Controller extends Robot{
+    public Joystick xboxController;
+    public Joystick normalJoystick;
     
     public void init() {
-
+        xboxController = new Joystick(1);
+        normalJoystick = new Joystick(1);
     }
     
     public float xboxGetAxis(String axis) {
@@ -20,47 +25,27 @@ public class Controller extends Robot4334{
             axisNum = 3;
         else
             axisNum = 0;
-        
-        if(axisNum == 2 || axisNum == 5) {
-            processInformation.finalYAxis = (float) input.xboxController.getRawAxis(axisNum);
-            return processInformation.finalYAxis;
-        }else if(axisNum == 1 || axisNum == 4) {
-            processInformation.finalXAxis = (float) input.xboxController.getRawAxis(axisNum);
-            return processInformation.finalXAxis;            
-        }else if(axisNum == 3) {
-            processInformation.finalAxis = (float) input.xboxController.getRawAxis(axisNum);
-            return processInformation.finalAxis;
-        }else
-            return 0;
+        processInformation.finalAxis = (float) xboxController.getRawAxis(axisNum);
+        return processInformation.finalAxis;
     }
     
     public boolean xboxGetButton(int button) {
-        return input.xboxController.getRawButton(button);
+        return xboxController.getRawButton(button);
     }
-    //hi how are you
+    
     public float joystickGetAxis(char XorY) {
         if(XorY=='X')
-            processInformation.finalXAxis = (float) input.normalJoystick.getX();
+            processInformation.finalXAxis = (float) normalJoystick.getX();
         else if(XorY=='Y')
-            processInformation.finalAxis = (float) input.normalJoystick.getY();
+            processInformation.finalAxis = (float) normalJoystick.getY();
         return processInformation.finalYAxis;
     }
     
     public boolean joystickGetButton(int button) {
-        if(input.normalJoystick.getRawButton(button))
+        if(normalJoystick.getRawButton(button))
             return true;
         else
             return false;
-    }
-    
-    public char getDriveType() {
-        char StraightOrDual;
-        if(controller.xboxGetAxis("triggers")>0.05 || controller.xboxGetAxis("triggers")<-0.05) {
-            StraightOrDual = 'S';
-        }else {
-            StraightOrDual = 'D';
-        }
-        return StraightOrDual;
     }
 }
 

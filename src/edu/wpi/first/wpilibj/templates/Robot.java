@@ -1,9 +1,8 @@
 package edu.wpi.first.wpilibj.templates;
 
 import edu.wpi.first.wpilibj.SimpleRobot;
-import edu.wpi.first.wpilibj.DriverStationLCD;
 
-public class Robot4334 extends SimpleRobot {
+public class Robot extends SimpleRobot {
 
 //Declaring all classes    
 public Driving driving;
@@ -16,7 +15,6 @@ public TimerControl timerControl;
 public ProcessInformation processInformation;
 public Autonomous autonomous;
 public Reset reset;
-public OperatorControl operatorControl;
 
     public void robotInit() {
         controller.init();
@@ -39,9 +37,7 @@ public OperatorControl operatorControl;
         processInformation = new ProcessInformation();
         autonomous = new Autonomous();
         reset = new Reset();
-        operatorControl = new OperatorControl("xboxMode"); // xboxMode vs. joystick arguments
     }
-     
     
     public void autonomous() {
         while(isAutonomous() && isEnabled()) {
@@ -51,13 +47,13 @@ public OperatorControl operatorControl;
     
     public void operatorControl() {
         while(isOperatorControl() && isEnabled()) {
-            operatorControl.run();
+            
         }
     }
     
     public void disabled() {
         while(isDisabled()) {
-            reset.resetAll();
+            
         }
     }
 }

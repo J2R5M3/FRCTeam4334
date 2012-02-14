@@ -1,13 +1,12 @@
 package edu.wpi.first.wpilibj.templates;
 import edu.wpi.first.wpilibj.Timer;
-public class TimerControl extends Robot4334{
+public class TimerControl extends Robot{
     
     public Timer timer;
     
     public void init() {
         timer = new Timer();
     }
-    
     public double timerControl(String args) {
         if(args.equals("start"))
             timer.start();
@@ -18,7 +17,7 @@ public class TimerControl extends Robot4334{
             timer.reset();
             timer.start();
         }
-        else if(args.equals("getTime")) {
+        else if(args.equals("get")) {
             processInformation.finalTime = timer.get();
             return processInformation.finalTime;
         }
