@@ -13,6 +13,7 @@ public class OperatorControl extends Robot4334{
     public void run() {
         while(xboxMode == true) { //XBoxController mode
             if(controller.xboxGetButton(2)) {
+                logging.log("Button 2 Pressed");
                 driving.stopMotor();
             }else {
                 if(controller.getDriveType() == 'S') { //Straight driving with triggers
