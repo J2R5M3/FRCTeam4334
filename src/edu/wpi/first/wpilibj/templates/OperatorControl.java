@@ -1,5 +1,5 @@
 package edu.wpi.first.wpilibj.templates;
-public class OperatorControl extends Robot{
+public class OperatorControl extends Robot4334{
     public boolean xboxMode;
     public void init() {
         

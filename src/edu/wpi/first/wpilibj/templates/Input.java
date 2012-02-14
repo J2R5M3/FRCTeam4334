@@ -4,7 +4,7 @@ import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.Gyro;
 import edu.wpi.first.wpilibj.Joystick;
 
-public class Input extends Robot{
+public class Input extends Robot4334{
     public Gyro gyro;
     public Encoder leftEncoder;
     public Encoder rightEncoder;

@@ -1,6 +1,6 @@
 package edu.wpi.first.wpilibj.templates;
 
-public class Controller extends Robot{
+public class Controller extends Robot4334{
     
     public void init() {
 

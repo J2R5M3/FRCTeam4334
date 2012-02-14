@@ -1,6 +1,6 @@
 package edu.wpi.first.wpilibj.templates;
 
-public class Reset extends Robot {
+public class Reset extends Robot4334 {
     
     public void init() {
 

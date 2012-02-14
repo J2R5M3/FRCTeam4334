@@ -1,7 +1,7 @@
 package edu.wpi.first.wpilibj.templates;
 import edu.wpi.first.wpilibj.DriverStationLCD;
 
-public class Logging extends Robot{
+public class Logging extends Robot4334{
     
     public void init() {
 

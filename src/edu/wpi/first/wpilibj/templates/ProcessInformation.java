@@ -1,5 +1,5 @@
 package edu.wpi.first.wpilibj.templates;
-public class ProcessInformation extends Robot{
+public class ProcessInformation extends Robot4334{
    
     
     public void init() {

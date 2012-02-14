@@ -1,6 +1,6 @@
 package edu.wpi.first.wpilibj.templates;
 import edu.wpi.first.wpilibj.RobotDrive;
-public class Driving extends Robot{
+public class Driving extends Robot4334{
    
     public RobotDrive robotDrive;
     
