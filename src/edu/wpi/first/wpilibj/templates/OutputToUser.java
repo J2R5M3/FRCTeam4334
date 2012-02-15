@@ -2,7 +2,7 @@ package edu.wpi.first.wpilibj.templates;
 
 import edu.wpi.first.wpilibj.DriverStationLCD;
 
-public class OutputToUser extends MainRobotFunctions{
+public class OutputToUser extends Robot4334{
 /**
  * Logs string message to netbeans console
  * @author Joel Gallant

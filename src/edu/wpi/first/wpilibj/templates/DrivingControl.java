@@ -1,5 +1,5 @@
 package edu.wpi.first.wpilibj.templates;
-public class DrivingControl extends MainRobotFunctions{
+public class DrivingControl extends Robot4334{
 /**
  * Drives straight
  * @author Joel Gallant

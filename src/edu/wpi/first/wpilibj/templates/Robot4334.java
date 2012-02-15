@@ -1,6 +1,6 @@
 package edu.wpi.first.wpilibj.templates;
 import edu.wpi.first.wpilibj.*;
-public class MainRobotFunctions extends SimpleRobot {
+public class Robot4334 extends SimpleRobot {
 /**
  * @author Joel Gallant
  * Method to run while disabled

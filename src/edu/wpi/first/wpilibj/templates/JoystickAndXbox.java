@@ -1,6 +1,6 @@
 package edu.wpi.first.wpilibj.templates;
 
-public class JoystickAndXbox extends MainRobotFunctions{   
+public class JoystickAndXbox extends Robot4334{   
 /**
  * Variable for axis # on Xbox Controller
  */    

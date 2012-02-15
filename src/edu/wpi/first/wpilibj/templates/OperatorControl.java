@@ -1,6 +1,6 @@
 package edu.wpi.first.wpilibj.templates;
 
-public class OperatorControl extends MainRobotFunctions{
+public class OperatorControl extends Robot4334{
 /**
  * Drives according to mode
  * @author Joel Gallant
