@@ -94,7 +94,7 @@ public class DriverStationLCD extends SensorBase implements IInputOutput{
      *
      * This is only called once the first time GetInstance() is called
      */
-    public DriverStationLCD() {
+    private DriverStationLCD() {
         m_textBuffer = new byte[FRCControl.USER_DS_LCD_DATA_SIZE];
 
         for (int i = 0; i < FRCControl.USER_DS_LCD_DATA_SIZE; i++) {
